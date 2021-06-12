@@ -1,0 +1,14 @@
+
+query SpecificRocket{
+  capsule(id: "C101") {
+    dragon {
+      id
+      active
+      crew_capacity
+      launch_payload_mass {
+        kg
+        lb
+      }
+    }
+  }
+}
