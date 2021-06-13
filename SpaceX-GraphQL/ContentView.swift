@@ -46,6 +46,7 @@ struct ContentView: View {
             GeometryReader { proxy in
                 ScrollView {
                     ZStack {
+                        
                         Rectangle().fill(Color.white)
                         Pager(page: self.page1,
                               data: self.data,
@@ -94,10 +95,13 @@ struct ContentView: View {
     func pageView(_ page: Int) -> some View {
         ZStack {
             
-            //Rectangle()
+            
+            Rectangle()
                // .fill(Color.black)
             Image("Space")
+            
             VStack{
+               
             Text(id).onAppear(perform: {
                 Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
                     switch result{
@@ -125,12 +129,14 @@ struct ContentView: View {
                                     Text("Detail")
                                 }
             }
-              .padding()
-                
+            
+              //.padding()
+            
         }
         .cornerRadius(5)
         .shadow(radius: 5)
         .edgesIgnoringSafeArea(.all)
+        
     }
     
     
@@ -143,8 +149,12 @@ struct DetailView: View{
     @State var crewCap = ""
     
     var body: some View{
-        
+    
+        ZStack{
+            Color.black
+                .edgesIgnoringSafeArea(.all)
         VStack{
+            
             //Image("Space")
             Text(String(activeCheck)).onAppear(perform: {
                   Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
@@ -163,7 +173,10 @@ struct DetailView: View{
                       }
                       
                   }
-              }).font(Font.headline.weight(.bold)).foregroundColor(.black)
+                  
+                  
+            }).font(Font.headline.weight(.bold)).foregroundColor(.white)
+            
             
             Text(name).onAppear(perform: {
                   Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
@@ -183,7 +196,7 @@ struct DetailView: View{
                       }
                       
                   }
-              }).font(Font.headline.weight(.bold)).foregroundColor(.black)
+              }).font(Font.headline.weight(.bold)).foregroundColor(.white)
             
             Text(crewCap).onAppear(perform: {
                   Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
@@ -203,8 +216,9 @@ struct DetailView: View{
                       }
                       
                   }
-              }).font(Font.headline.weight(.bold)).foregroundColor(.black)
+              }).font(Font.headline.weight(.bold)).foregroundColor(.white)
                   
+        }
         }
     }
     
