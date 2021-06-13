@@ -25,6 +25,27 @@
 		0469DA9426754EA1003B00B9 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DA9326754EA1003B00B9 /* Apollo.swift */; };
 		0469DA9626754EBA003B00B9 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0469DA9526754EBA003B00B9 /* Queries.graphql */; };
 		0469DA9926754FCD003B00B9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DA9826754FCD003B00B9 /* API.swift */; };
+		0469DAA52675E566003B00B9 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 0469DAA42675E566003B00B9 /* SwiftUIPager */; };
+		0469DAB52675E838003B00B9 /* PagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAAD2675E838003B00B9 /* PagerContent.swift */; };
+		0469DAB62675E838003B00B9 /* PagerContent+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAAE2675E838003B00B9 /* PagerContent+Helper.swift */; };
+		0469DAB72675E838003B00B9 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAAF2675E838003B00B9 /* Page.swift */; };
+		0469DAB82675E838003B00B9 /* Pager+Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAB02675E838003B00B9 /* Pager+Buildable.swift */; };
+		0469DAB92675E838003B00B9 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAB12675E838003B00B9 /* Pager.swift */; };
+		0469DABA2675E838003B00B9 /* PageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAB22675E838003B00B9 /* PageWrapper.swift */; };
+		0469DABB2675E838003B00B9 /* PagerContent+Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAB32675E838003B00B9 /* PagerContent+Buildable.swift */; };
+		0469DABC2675E838003B00B9 /* PageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAB42675E838003B00B9 /* PageTransition.swift */; };
+		0469DAC22675E84D003B00B9 /* View+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DABD2675E84C003B00B9 /* View+Helper.swift */; };
+		0469DAC32675E84D003B00B9 /* CGPoint+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DABE2675E84C003B00B9 /* CGPoint+Angle.swift */; };
+		0469DAC42675E84D003B00B9 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DABF2675E84D003B00B9 /* Buildable.swift */; };
+		0469DAC52675E84D003B00B9 /* OnDeactivateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAC02675E84D003B00B9 /* OnDeactivateModifier.swift */; };
+		0469DAC62675E84D003B00B9 /* OnAnimationCompletedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAC12675E84D003B00B9 /* OnAnimationCompletedModifier.swift */; };
+		0469DACE2675E85A003B00B9 /* PagingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAC72675E85A003B00B9 /* PagingAnimation.swift */; };
+		0469DACF2675E85A003B00B9 /* ContentLoadingPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAC82675E85A003B00B9 /* ContentLoadingPolicy.swift */; };
+		0469DAD02675E85A003B00B9 /* GesturePriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DAC92675E85A003B00B9 /* GesturePriority.swift */; };
+		0469DAD12675E85A003B00B9 /* SwipeInteractionArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DACA2675E85A003B00B9 /* SwipeInteractionArea.swift */; };
+		0469DAD22675E85A003B00B9 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DACB2675E85A003B00B9 /* SwipeDirection.swift */; };
+		0469DAD32675E85A003B00B9 /* PaginationSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DACC2675E85A003B00B9 /* PaginationSensitivity.swift */; };
+		0469DAD42675E85A003B00B9 /* PositionAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DACD2675E85A003B00B9 /* PositionAlignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +76,26 @@
 		0469DA9326754EA1003B00B9 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		0469DA9526754EBA003B00B9 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		0469DA9826754FCD003B00B9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "SpaceX-GraphQL/API.swift"; sourceTree = SOURCE_ROOT; };
+		0469DAAD2675E838003B00B9 /* PagerContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerContent.swift; sourceTree = "<group>"; };
+		0469DAAE2675E838003B00B9 /* PagerContent+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PagerContent+Helper.swift"; sourceTree = "<group>"; };
+		0469DAAF2675E838003B00B9 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		0469DAB02675E838003B00B9 /* Pager+Buildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pager+Buildable.swift"; sourceTree = "<group>"; };
+		0469DAB12675E838003B00B9 /* Pager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
+		0469DAB22675E838003B00B9 /* PageWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageWrapper.swift; sourceTree = "<group>"; };
+		0469DAB32675E838003B00B9 /* PagerContent+Buildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PagerContent+Buildable.swift"; sourceTree = "<group>"; };
+		0469DAB42675E838003B00B9 /* PageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTransition.swift; sourceTree = "<group>"; };
+		0469DABD2675E84C003B00B9 /* View+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Helper.swift"; sourceTree = "<group>"; };
+		0469DABE2675E84C003B00B9 /* CGPoint+Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Angle.swift"; sourceTree = "<group>"; };
+		0469DABF2675E84D003B00B9 /* Buildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
+		0469DAC02675E84D003B00B9 /* OnDeactivateModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDeactivateModifier.swift; sourceTree = "<group>"; };
+		0469DAC12675E84D003B00B9 /* OnAnimationCompletedModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnAnimationCompletedModifier.swift; sourceTree = "<group>"; };
+		0469DAC72675E85A003B00B9 /* PagingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingAnimation.swift; sourceTree = "<group>"; };
+		0469DAC82675E85A003B00B9 /* ContentLoadingPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentLoadingPolicy.swift; sourceTree = "<group>"; };
+		0469DAC92675E85A003B00B9 /* GesturePriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePriority.swift; sourceTree = "<group>"; };
+		0469DACA2675E85A003B00B9 /* SwipeInteractionArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeInteractionArea.swift; sourceTree = "<group>"; };
+		0469DACB2675E85A003B00B9 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		0469DACC2675E85A003B00B9 /* PaginationSensitivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationSensitivity.swift; sourceTree = "<group>"; };
+		0469DACD2675E85A003B00B9 /* PositionAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionAlignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +106,7 @@
 				0469DA8326754E1F003B00B9 /* ApolloCore in Frameworks */,
 				0469DA8E26754E1F003B00B9 /* ApolloCodegenLib in Frameworks */,
 				0469DA8B26754E1F003B00B9 /* Apollo-Dynamic in Frameworks */,
+				0469DAA52675E566003B00B9 /* SwiftUIPager in Frameworks */,
 				0469DA8926754E1F003B00B9 /* Apollo in Frameworks */,
 				0469DA8726754E1F003B00B9 /* ApolloWebSocket in Frameworks */,
 				0469DA8526754E1F003B00B9 /* ApolloSQLite in Frameworks */,
@@ -93,6 +135,7 @@
 		0469DA6826754D47003B00B9 /* SpaceX-GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				0469DAAA2675E7B7003B00B9 /* Pagination */,
 				0469DA9226754E90003B00B9 /* GraphQL */,
 				0469DA9026754E79003B00B9 /* schema.json */,
 				0469DA6926754D47003B00B9 /* AppDelegate.swift */,
@@ -125,6 +168,49 @@
 			path = GraphQL;
 			sourceTree = "<group>";
 		};
+		0469DAAA2675E7B7003B00B9 /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				0469DAAF2675E838003B00B9 /* Page.swift */,
+				0469DAB12675E838003B00B9 /* Pager.swift */,
+				0469DAB02675E838003B00B9 /* Pager+Buildable.swift */,
+				0469DAAD2675E838003B00B9 /* PagerContent.swift */,
+				0469DAB32675E838003B00B9 /* PagerContent+Buildable.swift */,
+				0469DAAE2675E838003B00B9 /* PagerContent+Helper.swift */,
+				0469DAB42675E838003B00B9 /* PageTransition.swift */,
+				0469DAB22675E838003B00B9 /* PageWrapper.swift */,
+				0469DAAC2675E7DC003B00B9 /* PageConfiguration */,
+				0469DAAB2675E7CF003B00B9 /* Helpers */,
+			);
+			path = Pagination;
+			sourceTree = "<group>";
+		};
+		0469DAAB2675E7CF003B00B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0469DABF2675E84D003B00B9 /* Buildable.swift */,
+				0469DABE2675E84C003B00B9 /* CGPoint+Angle.swift */,
+				0469DAC12675E84D003B00B9 /* OnAnimationCompletedModifier.swift */,
+				0469DAC02675E84D003B00B9 /* OnDeactivateModifier.swift */,
+				0469DABD2675E84C003B00B9 /* View+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0469DAAC2675E7DC003B00B9 /* PageConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				0469DAC82675E85A003B00B9 /* ContentLoadingPolicy.swift */,
+				0469DAC92675E85A003B00B9 /* GesturePriority.swift */,
+				0469DACC2675E85A003B00B9 /* PaginationSensitivity.swift */,
+				0469DAC72675E85A003B00B9 /* PagingAnimation.swift */,
+				0469DACD2675E85A003B00B9 /* PositionAlignment.swift */,
+				0469DACB2675E85A003B00B9 /* SwipeDirection.swift */,
+				0469DACA2675E85A003B00B9 /* SwipeInteractionArea.swift */,
+			);
+			path = PageConfiguration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +236,7 @@
 				0469DA8826754E1F003B00B9 /* Apollo */,
 				0469DA8A26754E1F003B00B9 /* Apollo-Dynamic */,
 				0469DA8D26754E1F003B00B9 /* ApolloCodegenLib */,
+				0469DAA42675E566003B00B9 /* SwiftUIPager */,
 			);
 			productName = "SpaceX-GraphQL";
 			productReference = 0469DA6626754D47003B00B9 /* SpaceX-GraphQL.app */;
@@ -180,6 +267,7 @@
 			mainGroup = 0469DA5D26754D47003B00B9;
 			packageReferences = (
 				0469DA8126754E1F003B00B9 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				0469DAA32675E566003B00B9 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
 			);
 			productRefGroup = 0469DA6726754D47003B00B9 /* Products */;
 			projectDirPath = "";
@@ -231,12 +319,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0469DAD22675E85A003B00B9 /* SwipeDirection.swift in Sources */,
 				0469DA6A26754D47003B00B9 /* AppDelegate.swift in Sources */,
+				0469DAB62675E838003B00B9 /* PagerContent+Helper.swift in Sources */,
 				0469DA7126754D47003B00B9 /* SpaceX_GraphQL.xcdatamodeld in Sources */,
 				0469DA6C26754D47003B00B9 /* SceneDelegate.swift in Sources */,
+				0469DAC32675E84D003B00B9 /* CGPoint+Angle.swift in Sources */,
+				0469DAD02675E85A003B00B9 /* GesturePriority.swift in Sources */,
+				0469DAC52675E84D003B00B9 /* OnDeactivateModifier.swift in Sources */,
+				0469DAD12675E85A003B00B9 /* SwipeInteractionArea.swift in Sources */,
+				0469DAC22675E84D003B00B9 /* View+Helper.swift in Sources */,
+				0469DAB82675E838003B00B9 /* Pager+Buildable.swift in Sources */,
+				0469DACF2675E85A003B00B9 /* ContentLoadingPolicy.swift in Sources */,
+				0469DAD42675E85A003B00B9 /* PositionAlignment.swift in Sources */,
 				0469DA6E26754D47003B00B9 /* ContentView.swift in Sources */,
+				0469DABB2675E838003B00B9 /* PagerContent+Buildable.swift in Sources */,
+				0469DAD32675E85A003B00B9 /* PaginationSensitivity.swift in Sources */,
+				0469DAB72675E838003B00B9 /* Page.swift in Sources */,
 				0469DA9926754FCD003B00B9 /* API.swift in Sources */,
 				0469DA9426754EA1003B00B9 /* Apollo.swift in Sources */,
+				0469DAB52675E838003B00B9 /* PagerContent.swift in Sources */,
+				0469DABC2675E838003B00B9 /* PageTransition.swift in Sources */,
+				0469DABA2675E838003B00B9 /* PageWrapper.swift in Sources */,
+				0469DAC42675E84D003B00B9 /* Buildable.swift in Sources */,
+				0469DAB92675E838003B00B9 /* Pager.swift in Sources */,
+				0469DACE2675E85A003B00B9 /* PagingAnimation.swift in Sources */,
+				0469DAC62675E84D003B00B9 /* OnAnimationCompletedModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +554,14 @@
 				minimumVersion = 0.43.0;
 			};
 		};
+		0469DAA32675E566003B00B9 /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -478,6 +594,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0469DA8126754E1F003B00B9 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloCodegenLib;
+		};
+		0469DAA42675E566003B00B9 /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0469DAA32675E566003B00B9 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
 		};
 /* End XCSwiftPackageProductDependency section */
 
