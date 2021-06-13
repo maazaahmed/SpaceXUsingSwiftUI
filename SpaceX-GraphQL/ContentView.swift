@@ -46,6 +46,7 @@ struct ContentView: View {
             GeometryReader { proxy in
                 ScrollView {
                     ZStack {
+                        Rectangle().fill(Color.white)
                         Pager(page: self.page1,
                               data: self.data,
                               id: \.self) { page in
@@ -58,8 +59,8 @@ struct ContentView: View {
                         .itemAspectRatio(0.8, alignment: .end)
                         .padding(8)
                         .frame(width: min(proxy.size.height, proxy.size.width),
-                               height: min(proxy.size.height, proxy.size.width))
-                        .background(Color.gray.opacity(0.2))
+                              height: min(proxy.size.height, proxy.size.width))
+                       // .background(Color.black.opacity(0.2))
 
                       //  Text("Other alignments")
                         //    .bold()
@@ -83,7 +84,7 @@ struct ContentView: View {
                         //.itemAspectRatio(0.8, alignment: .end)
                         //.padding(8)
                         //.frame(width: proxy.size.width, height: 300)
-                        .background(Color.gray.opacity(0.2))
+                        //.background(Color.black.opacity(0.2))
                     }
                 }
             }.navigationBarTitle("SpaceX", displayMode: .inline)
@@ -92,16 +93,18 @@ struct ContentView: View {
 
     func pageView(_ page: Int) -> some View {
         ZStack {
-            Rectangle()
-                .fill(Color.black)
+            
+            //Rectangle()
+               // .fill(Color.black)
             Image("Space")
+            VStack{
             Text(id).onAppear(perform: {
                 Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
                     switch result{
                     
                     case .success(let graphQLResult):
                         DispatchQueue.main.async {
-                            if let ID = graphQLResult.data?.capsule?.dragon?.id{
+                            if let ID = graphQLResult.data?.capsule?.id{
                                 //self.id = "ID:  "
                                 self.id = ID
                             }
@@ -112,26 +115,16 @@ struct ContentView: View {
                     }
                     
                 }
+                
+                
             }).font(Font.headline.weight(.bold)).foregroundColor(.white)
             
-          /*  Text(String(active)).onAppear(perform: {
-                Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
-                    switch result{
-                    
-                    case .success(let graphQLResult):
-                        DispatchQueue.main.async {
-                            if let ACT = graphQLResult.data?.capsule?.dragon?.active{
-                               //self.id = "ID:  "
-                                self.active = ACT
-                            }
-                        }
-                        
-                    case .failure(let error):
-                        print("Error: ", error)
-                    }
-                    
-                }
-            })*/
+            
+          
+                NavigationLink(destination: DetailView()) {
+                                    Text("Detail")
+                                }
+            }
               .padding()
                 
         }
@@ -141,6 +134,79 @@ struct ContentView: View {
     }
     
     
+    
+}
+
+struct DetailView: View{
+    @State var name = ""
+    @State var activeCheck = false
+    @State var crewCap = ""
+    
+    var body: some View{
+        
+        VStack{
+            //Image("Space")
+            Text(String(activeCheck)).onAppear(perform: {
+                  Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
+                      switch result{
+                      
+                      case .success(let graphQLResult):
+                          DispatchQueue.main.async {
+                              if let ACT = graphQLResult.data?.capsule?.dragon?.active{
+                                 //self.id = "ID:  "
+                                  self.activeCheck = ACT
+                              }
+                          }
+                          
+                      case .failure(let error):
+                          print("Error: ", error)
+                      }
+                      
+                  }
+              }).font(Font.headline.weight(.bold)).foregroundColor(.black)
+            
+            Text(name).onAppear(perform: {
+                  Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
+                      switch result{
+                      
+                      case .success(let graphQLResult):
+                          DispatchQueue.main.async {
+                              if let nameID = graphQLResult.data?.capsule?.dragon?.id{
+                                 //self.id = "ID:  "
+                                self.name = "ID: "
+                                  self.name += nameID
+                              }
+                          }
+                          
+                      case .failure(let error):
+                          print("Error: ", error)
+                      }
+                      
+                  }
+              }).font(Font.headline.weight(.bold)).foregroundColor(.black)
+            
+            Text(crewCap).onAppear(perform: {
+                  Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
+                      switch result{
+                      
+                      case .success(let graphQLResult):
+                          DispatchQueue.main.async {
+                              if let cap = graphQLResult.data?.capsule?.dragon?.crewCapacity{
+                                 //self.id = "ID:  "
+                                self.crewCap = "Crew Capacity: "
+                                  self.crewCap += String(cap)
+                              }
+                          }
+                          
+                      case .failure(let error):
+                          print("Error: ", error)
+                      }
+                      
+                  }
+              }).font(Font.headline.weight(.bold)).foregroundColor(.black)
+                  
+        }
+    }
     
 }
 

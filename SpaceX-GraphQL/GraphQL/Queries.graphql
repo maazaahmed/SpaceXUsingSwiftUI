@@ -1,6 +1,7 @@
 
 query SpecificRocket{
   capsule(id: "C101") {
+    id
     dragon {
       id
       active

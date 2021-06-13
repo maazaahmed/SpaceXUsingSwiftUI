@@ -11,6 +11,7 @@ public final class SpecificRocketQuery: GraphQLQuery {
     query SpecificRocket {
       capsule(id: "C101") {
         __typename
+        id
         dragon {
           __typename
           id
@@ -65,6 +66,7 @@ public final class SpecificRocketQuery: GraphQLQuery {
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .scalar(GraphQLID.self)),
           GraphQLField("dragon", type: .object(Dragon.selections)),
         ]
       }
@@ -75,8 +77,8 @@ public final class SpecificRocketQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(dragon: Dragon? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Capsule", "dragon": dragon.flatMap { (value: Dragon) -> ResultMap in value.resultMap }])
+      public init(id: GraphQLID? = nil, dragon: Dragon? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Capsule", "id": id, "dragon": dragon.flatMap { (value: Dragon) -> ResultMap in value.resultMap }])
       }
 
       public var __typename: String {
@@ -85,6 +87,15 @@ public final class SpecificRocketQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID? {
+        get {
+          return resultMap["id"] as? GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
         }
       }
 
