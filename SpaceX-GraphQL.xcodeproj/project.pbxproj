@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042815E226766B4E00F18FED /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042815E126766B4E00F18FED /* SplashScreen.swift */; };
 		0469DA6A26754D47003B00B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DA6926754D47003B00B9 /* AppDelegate.swift */; };
 		0469DA6C26754D47003B00B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DA6B26754D47003B00B9 /* SceneDelegate.swift */; };
 		0469DA6E26754D47003B00B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469DA6D26754D47003B00B9 /* ContentView.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		042815E126766B4E00F18FED /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0469DA6626754D47003B00B9 /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0469DA6926754D47003B00B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0469DA6B26754D47003B00B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				0469DA9026754E79003B00B9 /* schema.json */,
 				0469DA6926754D47003B00B9 /* AppDelegate.swift */,
 				0469DA6B26754D47003B00B9 /* SceneDelegate.swift */,
+				042815E126766B4E00F18FED /* SplashScreen.swift */,
 				0469DA6D26754D47003B00B9 /* ContentView.swift */,
 				0469DA7226754D4D003B00B9 /* Assets.xcassets */,
 				0469DA7726754D4D003B00B9 /* LaunchScreen.storyboard */,
@@ -328,6 +331,7 @@
 				0469DAD02675E85A003B00B9 /* GesturePriority.swift in Sources */,
 				0469DAC52675E84D003B00B9 /* OnDeactivateModifier.swift in Sources */,
 				0469DAD12675E85A003B00B9 /* SwipeInteractionArea.swift in Sources */,
+				042815E226766B4E00F18FED /* SplashScreen.swift in Sources */,
 				0469DAC22675E84D003B00B9 /* View+Helper.swift in Sources */,
 				0469DAB82675E838003B00B9 /* Pager+Buildable.swift in Sources */,
 				0469DACF2675E85A003B00B9 /* ContentLoadingPolicy.swift in Sources */,

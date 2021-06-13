@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State var id = ""
     @State var active = false
+    let fuberBlue = Color("Fuber blue")
    
   /*  var body: some View {
         Text(id).onAppear(perform: {
@@ -36,6 +37,7 @@ struct ContentView: View {
     
     @StateObject var page1: Page = .first()
     @StateObject var page2: Page = .first()
+    @State var showSplash = true
     var data = Array(0..<10)
 
 
@@ -86,23 +88,42 @@ struct ContentView: View {
                         //.padding(8)
                         //.frame(width: proxy.size.width, height: 300)
                         //.background(Color.black.opacity(0.2))
+                        SplashScreen()
+                          .opacity(showSplash ? 1 : 0)
+                          .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                              SplashScreen.shouldAnimate = false
+                              withAnimation() {
+                                self.showSplash = false
+                              }
+                            }
+                        }
                     }
+                    
                 }
-            }.navigationBarTitle("SpaceX", displayMode: .inline)
-        }.navigationViewStyle(StackNavigationViewStyle())
+                
+            }//.navigationBarTitle("SpaceX", displayMode: .inline)
+            
+        }//.navigationViewStyle(StackNavigationViewStyle())
+        
+        .font(.system(.largeTitle, design: .rounded)).foregroundColor(.white)
     }
 
     func pageView(_ page: Int) -> some View {
         ZStack {
             
             
-            Rectangle()
-               // .fill(Color.black)
-            Image("Space")
-            
+            Rectangle().fill(fuberBlue)
+                
+                
+           // Image("Space")
             VStack{
+                
+                Image("Rocket")
                
             Text(id).onAppear(perform: {
+               
+                
                 Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
                     switch result{
                     
@@ -121,6 +142,8 @@ struct ContentView: View {
                 }
                 
                 
+                
+                
             }).font(Font.headline.weight(.bold)).foregroundColor(.white)
             
             
@@ -130,12 +153,18 @@ struct ContentView: View {
                                 }
             }
             
+            
+            
+            
               //.padding()
+            
             
         }
         .cornerRadius(5)
         .shadow(radius: 5)
         .edgesIgnoringSafeArea(.all)
+        
+        
         
     }
     
@@ -144,6 +173,7 @@ struct ContentView: View {
 }
 
 struct DetailView: View{
+    let fuberBlue = Color("Fuber blue")
     @State var name = ""
     @State var activeCheck = false
     @State var crewCap = ""
@@ -151,8 +181,7 @@ struct DetailView: View{
     var body: some View{
     
         ZStack{
-            Color.black
-                .edgesIgnoringSafeArea(.all)
+            Rectangle().fill(fuberBlue).edgesIgnoringSafeArea(.all)
         VStack{
             
             //Image("Space")
