@@ -93,7 +93,8 @@ struct ContentView: View {
     func pageView(_ page: Int) -> some View {
         ZStack {
             Rectangle()
-                .fill(Color.gray)
+                .fill(Color.black)
+            Image("Space")
             Text(id).onAppear(perform: {
                 Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
                     switch result{
@@ -101,8 +102,8 @@ struct ContentView: View {
                     case .success(let graphQLResult):
                         DispatchQueue.main.async {
                             if let ID = graphQLResult.data?.capsule?.dragon?.id{
-                                self.id = "ID:  "
-                                self.id += ID
+                                //self.id = "ID:  "
+                                self.id = ID
                             }
                         }
                         
@@ -111,7 +112,7 @@ struct ContentView: View {
                     }
                     
                 }
-            })
+            }).font(Font.headline.weight(.bold)).foregroundColor(.white)
             
           /*  Text(String(active)).onAppear(perform: {
                 Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
