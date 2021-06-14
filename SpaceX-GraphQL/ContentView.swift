@@ -108,23 +108,26 @@ struct ContentView: View {
         
         .font(.system(.largeTitle, design: .rounded)).foregroundColor(.white)
     }
-
+var IDs = "C10"
+var count = 1
     func pageView(_ page: Int) -> some View {
+        
+       
         ZStack {
             
             
             Rectangle().fill(fuberBlue)
+           
                 
                 
            // Image("Space")
             VStack{
-                
                 Image("Rocket")
                
             Text(id).onAppear(perform: {
-               
                 
-                Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
+                
+                Network.shared.apollo.fetch(query: FetchRocketQuery(id: IDs + String(page))){ result in
                     switch result{
                     
                     case .success(let graphQLResult):
@@ -132,6 +135,7 @@ struct ContentView: View {
                             if let ID = graphQLResult.data?.capsule?.id{
                                 //self.id = "ID:  "
                                 self.id = ID
+                                currentID = id
                             }
                         }
                         
@@ -172,7 +176,9 @@ struct ContentView: View {
     
 }
 
+var currentID = ""
 struct DetailView: View{
+    var IDs = "C10"
     let fuberBlue = Color("Fuber blue")
     @State var name = ""
     @State var activeCheck = false
@@ -186,7 +192,7 @@ struct DetailView: View{
             
             //Image("Space")
             Text(String(activeCheck)).onAppear(perform: {
-                  Network.shared.apollo.fetch(query: SpecificRocketQuery()){ result in
+                  Network.shared.apollo.fetch(query: FetchRocketQuery(id: currentID)){ result in
                       switch result{
                       
                       case .success(let graphQLResult):

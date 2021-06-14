@@ -14,5 +14,19 @@ query SpecificRocket{
   }
 }
 
+query FetchRocket($id: ID!){
+  capsule(id: $id) {
+    id
+    dragon {
+      active
+      launch_payload_mass {
+        kg
+        lb
+      }
+      id
+      crew_capacity
+    }
+  }
+}
 
 
