@@ -14,9 +14,11 @@ query SpecificRocket{
   }
 }
 
+
+
+
 query FetchRocket($id: ID!){
   capsule(id: $id) {
-    id
     dragon {
       active
       launch_payload_mass {
@@ -25,8 +27,63 @@ query FetchRocket($id: ID!){
       }
       id
       crew_capacity
+      launch_payload_vol {
+        cubic_feet
+        cubic_meters
+      }
+      name
+      orbit_duration_yr
+      pressurized_capsule {
+        payload_volume {
+          cubic_feet
+          cubic_meters
+        }
+      }
+      return_payload_mass {
+        kg
+        lb
+      }
+      return_payload_vol {
+        cubic_feet
+        cubic_meters
+      }
+      sidewall_angle_deg
+      thrusters {
+        amount
+        fuel_1
+        fuel_2
+        pods
+        thrust {
+          kN
+          lbf
+        }
+        type
+      }
+      trunk {
+        cargo {
+          solar_array
+          unpressurized_cargo
+        }
+        trunk_volume {
+          cubic_feet
+          cubic_meters
+        }
+      }
+      type
+      wikipedia
     }
+    landings
+    missions {
+      flight
+      name
+    }
+    id
+    original_launch
+    reuse_count
+    status
+    type
   }
 }
+
 
 

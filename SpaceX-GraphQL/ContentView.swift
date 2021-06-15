@@ -39,11 +39,14 @@ struct ContentView: View {
     @StateObject var page2: Page = .first()
     @State var showSplash = true
     var data = Array(0..<10)
+    var i = 0
+    
 
 
     @State var alignment: ExamplePositionAlignment = .start
 
     var body: some View {
+       
         NavigationView {
             GeometryReader { proxy in
                 ScrollView {
